@@ -7,7 +7,7 @@ export function WelcomePage() {
   return (
     <View style={styles.layoutWelcome}>
 
-      <ImageBackground source={require('./assets/background_login.png')} style={[styles.image, tw`overflow-hidden`]}>
+      <ImageBackground source={require('../../assets/background_login.png')} style={[styles.image, tw`overflow-hidden`]}>
         <View style={styles.welcomePage}>
           <View></View>
           <Image

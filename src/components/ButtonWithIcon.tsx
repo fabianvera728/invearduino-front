@@ -20,10 +20,10 @@ export const ButtonWithIcon = ({ handlePress, title, children, style = {}, style
 };
 
 interface ButtonProps {
-    type: "normal" | "gradient";
-    mode: "primary" | "secondary" | "tertiary";
-    size: "small" | "large";
-    onPress: any;
+    type?: "normal" | "gradient";
+    mode?: "primary" | "secondary" | "tertiary";
+    size?: "small" | "large";
+    onPress?: any;
     children: string;
 }
 

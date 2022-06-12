@@ -19,7 +19,6 @@ export const NewCropPage = () => {
 
     const onChange = (name: "type" | "arduino_code" | "name" | "description" | "banner", value: string) => {
         setForm({ ...form, [name]: value })
-        console.log(form)
     }
 
     const onSubmit = () => {
@@ -27,7 +26,7 @@ export const NewCropPage = () => {
     }
 
     return (
-        <Layout backgroundImage={"/assets/images/edit_crop.png"}>
+        <Layout backgroundImage={require("../../assets/images/edit_crop.png")}>
             <View style={[styles.newCropPage, tw`w-full justify-between`]}>
                 <View>
                     <View style={tw`flex flex-row w-full items-center justify-between`}>

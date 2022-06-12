@@ -1,9 +1,9 @@
 import { ReactElement } from "react";
-import { ImageBackground, StyleSheet, Text, View } from "react-native"
+import { ImageBackground, ImageSourcePropType, StyleSheet, Text, View } from "react-native"
 
 interface LayoutProps {
-    backgroundImage: string;
-    header: any;
+    backgroundImage?: ImageSourcePropType;
+    header?: any;
     children: ReactElement;
 }
 
@@ -11,7 +11,7 @@ interface LayoutProps {
 export const Layout = ({ children, header = "", backgroundImage }: LayoutProps) => {
     return (
         <View style={styles.layout}>
-            <ImageBackground source={{ uri: backgroundImage }} style={styles.image}>
+            <ImageBackground source={backgroundImage || require('../../assets/images/edit_crop.png')} style={styles.image}>
                 {children}
             </ImageBackground>
         </View>

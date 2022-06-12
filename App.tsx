@@ -5,7 +5,7 @@ import { NewCropPage } from "./src/pages/NewCropPage";
 import { StatisticsPage } from "./src/pages/StatisticsPage";
 import { NewCropCustomParametersPage } from "./src/pages/NewCropCustomParametersPage";
 import { LoginPage } from './src/pages/Login';
-import { WelcomePage } from './WelcomePage';
+import { WelcomePage } from './src/pages/WelcomePage';
 
 
 export default function App() {
@@ -15,8 +15,8 @@ export default function App() {
       {/* <LoginPage /> */}
       {/* <HomePage /> */}
       <NewCropPage />
-      {/* <NewCropCustomParametersPage />*/}
-      {/* <StatisticsPage /> */}
+{/*       <NewCropCustomParametersPage />
+ */}      {/* <StatisticsPage /> */}
     </View>
   );
 }

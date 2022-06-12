@@ -1,16 +1,21 @@
-import { Text, TextInput, View } from 'react-native';
+import { AlignRight, ArrowLeft, Menu } from 'iconoir-react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 import tw from 'twrnc';
+import { Button, IconButton } from '../components/ButtonWithIcon';
 import {Layout} from '../shared/Layout';
-import { styles } from './Home';
 
 
 export const NewCropCustomParametersPage = () => {
     return (
-        <Layout>
-            <View>
+        <Layout backgroundImage={require('../../assets/images/edit_crop.png')}>
+            <View style={styles.newCropPage}>
                 <View style={tw`flex flex-row w-full items-center justify-between`}>
-                    <Text>"Icon"</Text>
-                    <Text>Icon</Text>
+                    <IconButton>
+                        <ArrowLeft/>
+                    </IconButton>
+                    <IconButton>
+                        <Menu/>
+                    </IconButton>
                 </View>
                 <View style={tw`w-full mt-8 flex flex-col`}>
                     <Text style={tw`text-xl`}><strong>Personalizar parametros</strong></Text>
@@ -57,7 +62,62 @@ export const NewCropCustomParametersPage = () => {
                 <View style={tw`mt-4 w-full mt-3 flex flex-col`}>
                     <Text><strong>Imagenes recientes</strong></Text>
                 </View>
+                <View style={tw`mt-4 w-full mt-3 flex flex-col`}>
+                    <Button type="gradient">Hola mundo</Button>
+                </View>
             </View>
+           
         </Layout>
     );
 };
+
+const styles = StyleSheet.create({
+    newCropPage: {
+        flex: 1,
+        alignContent: "center",
+        alignItems: "flex-start",
+        paddingVertical: "2rem",
+        paddingHorizontal: "2rem",
+    },
+    centeredView: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 22
+    },
+    modalView: {
+        margin: 20,
+        backgroundColor: "white",
+        borderRadius: 20,
+        padding: 35,
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5
+    },
+    button: {
+        borderRadius: 20,
+        padding: 10,
+        elevation: 2
+    },
+    buttonOpen: {
+        backgroundColor: "#F194FF",
+    },
+    buttonClose: {
+        backgroundColor: "#2196F3",
+    },
+    textStyle: {
+        color: "white",
+        fontWeight: "bold",
+        textAlign: "center"
+    },
+    modalText: {
+        marginBottom: 15,
+        textAlign: "center"
+    }
+});
