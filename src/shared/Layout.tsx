@@ -31,7 +31,6 @@ export const Layout = ({
   backgroundImage,
 }: LayoutProps) => {
   const background = BackgroundStaticImage.getImage(backgroundImage);
-  console.log(background);
   
   return (
     <View style={styles.layout}>
