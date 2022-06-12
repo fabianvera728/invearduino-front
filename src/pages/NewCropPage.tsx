@@ -19,7 +19,6 @@ export const NewCropPage = () => {
 
     const onChange = (name: "type" | "arduino_code" | "name" | "description" | "banner", value: string) => {
         setForm({ ...form, [name]: value })
-        console.log(form)
     }
 
     const onSubmit = () => {
