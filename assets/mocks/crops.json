@@ -1,0 +1,22 @@
+{
+    "data":  [
+        {
+            "type": "Frutas",
+            "arduino_code": "123",
+            "name": "Cultivo de fresa",
+            "description": "Este es el cultivo de fresa",
+            "banner": "http://cdn.shopify.com/s/files/1/0400/8784/6957/articles/requerimientos_de_clima_y_suelo_de_la_fresa.png?v=1602083394",
+            "created_at": "junio 19, 2020",
+            "updated_at": "junio 20, 2020"
+        },
+        {
+            "type": "Vegetales",
+            "arduino_code": "65675",
+            "name": "Cultivo de cebolla",
+            "description": "Este es el cultivo de cebolla",
+            "banner": "http://cdn.shopify.com/s/files/1/0400/8784/6957/articles/requerimientos_de_clima_y_suelo_de_la_fresa.png?v=1602083394",
+            "created_at": "mayo 19, 2020",
+            "updated_at": "mayo 20, 2020"
+        }
+    ]
+}
