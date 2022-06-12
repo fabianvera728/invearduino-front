@@ -1,20 +1,43 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, View } from 'react-native';
+import { HomePage } from './src/pages/Home';
+import { NewCropPage } from "./src/pages/NewCropPage";
+import { StatisticsPage } from "./src/pages/StatisticsPage";
+import { NewCropCustomParametersPage } from "./src/pages/NewCropCustomParametersPage";
+import { LoginPage } from './src/pages/Login';
+import { WelcomePage } from './WelcomePage';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {/* <WelcomePage /> */}
+      {/* <LoginPage /> */}
+      {/* <HomePage /> */}
+      <NewCropPage />
+      {/* <NewCropCustomParametersPage />*/}
+      {/* <StatisticsPage /> */}
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignContent: "center",
+    alignItems: "center",
+    overflow: "hidden"
+    /*     paddingHorizontal: "2rem",
+        paddingVertical: "2rem" */
   },
+  footer: {
+    alignContent: "flex-end",
+    alignItems: "center",
+  },
+  text: {
+    backgroundColor: '#333333',
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 10
+  }
 });
