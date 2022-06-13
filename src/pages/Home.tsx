@@ -2,8 +2,9 @@ import { Menu} from 'iconoir-react-native';
 import { useState } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import tw from 'twrnc';
+import { Button } from '../components/ButtonWithIcon';
 
-export const HomePage = () => {
+export const HomePage = ({navigation}: any) => {
     const [] = useState(false)
     return (
         <View style={[styles.homePage, tw`w-full`]}>
@@ -16,6 +17,8 @@ export const HomePage = () => {
             </View>
             <View style={tw`w-full mt-8 flex flex-col`}>
                 <Text><strong>Cultivos</strong></Text>
+                <Button onPress={() => navigation.navigate('New crop')}>Crear</Button>
+                <Button onPress={() => navigation.navigate('Dashboard')}>Panel de control</Button>
                 <View></View>
             </View>
             <View style={tw`mt-4 w-full mt-3 flex flex-col`}>
@@ -31,6 +34,7 @@ export const styles = StyleSheet.create({
         alignContent: "center",
         alignItems: "flex-start",
         paddingVertical: "2rem",
+        backgroundColor: "white",
         paddingHorizontal: "2rem"
     },
     text: {

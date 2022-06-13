@@ -1,9 +1,11 @@
+import MaskedView, { MaskedViewBase } from '@react-native-masked-view/masked-view';
 import { ArrowLeft, Menu } from 'iconoir-react-native';
 import { useState } from 'react';
 import { Alert, Modal, ImageBackground, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import tw from 'twrnc';
-import { Button, ButtonWithIcon, IconButton } from '../components/ButtonWithIcon';
-import {Layout} from '../shared/Layout';
+import { Button, IconButton } from '../components/ButtonWithIcon';
+import { Layout } from '../shared/Layout';
+import { StyledText } from '../atoms/styled-text/StyledText';
 
 
 export const NewCropPage = () => {
@@ -29,17 +31,17 @@ export const NewCropPage = () => {
         <Layout backgroundImage={"backgroundGradient"}>
             <View style={[styles.newCropPage, tw`w-full justify-between`]}>
                 <View>
-                    <View style={tw`flex flex-row w-full items-center justify-between`}>
+                   {/*  <View style={tw`flex flex-row w-full items-center justify-between`}>
                         <IconButton>
                             <ArrowLeft />
                         </IconButton>
                         <IconButton>
                             <Menu />
                         </IconButton>
-                    </View>
-                    <View style={tw`w-full mt-8 flex flex-col`}>
-                        <Text style={tw`text-xl`}>Crear nuevo cultivo</Text>
-                        <Text style={tw`mt-2 text-gray-500`}>Seleccionar un tipo de cultivo permite prefilar el invernadero y sugerir parámetros de configuración por defecto</Text>
+                    </View> */}
+                    <View style={tw`w-full flex flex-col`}>
+                        <StyledText mode="gradient" tag="heading" weight="bold">Crear nuevo cultivo</StyledText>
+                        <StyledText>Seleccionar un tipo de cultivo permite prefilar el invernadero y sugerir parámetros de configuración por defecto</StyledText>
                         <View style={tw`mt-4`}>
                             <Modal
                                 animationType="slide"
@@ -62,24 +64,24 @@ export const NewCropPage = () => {
                                     </View>
                                 </View>
                             </Modal>
-                            <Text style={tw`text-gray-500 mb-1`}>Tipo de cultivo</Text>
+                            <StyledText tag="label">Tipo de cultivo</StyledText>
                             <Pressable
                                 style={tw`border border-gray-300 rounded px-3 py-3 block`}
                                 onPress={() => setModalVisible(true)}
                             >
-                                <Text>{form.type}</Text>
+                                <Text>🍑 {form.type}</Text>
                             </Pressable>
                         </View>
                         <View style={tw`mt-2`}>
-                            <Text style={tw`text-gray-500 mb-1`}>Código de Arduino</Text>
+                            <StyledText tag="label">Código de Arduino</StyledText>
                             <TextInput style={tw`border border-gray-300 rounded px-3 py-3`} placeholder="Código" onChangeText={(e) => onChange("arduino_code", e)} />
                         </View>
                         <View style={tw`mt-2`}>
-                            <Text style={tw`text-gray-500 mb-1`}>Nombre del cultivo</Text>
+                            <StyledText tag="label">Nombre del cultivo</StyledText>
                             <TextInput style={tw`border border-gray-300 rounded px-3 py-3`} placeholder="Nombre del cultivo" onChangeText={(e) => onChange('name', e)} />
                         </View>
                         <View style={tw`mt-2`}>
-                            <Text style={tw`text-gray-500 mb-1`}>Descripción</Text>
+                            <StyledText tag="label">Descripción</StyledText>
                             <TextInput style={tw`border border-gray-300 rounded px-3 py-3`} placeholder="Descripción" onChangeText={(e) => onChange("description", e)} />
                         </View>
                     </View>
